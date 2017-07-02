@@ -1,0 +1,20 @@
+%h3 (Note: Only first row real time data, rest are random numbers but we can get real data once we set road extremities)
+%table
+  %tr
+    %th Road Name
+    %th Road Width(m)
+    %th No. of Lanes
+    %th Upstream Traffic Time
+    %th Downstream Traffic Time
+    %th Suggested Upstream lanes
+    %th Suggested Downstream lanes
+  - @roads.each do |road|
+    - data = road.all_data
+    %tr
+      %td= road.name
+      %td= road.width
+      %td= road.get_lanes
+      %td= data[:timings][0] 
+      %td= data[:timings][1] 
+      %td= data[:suggested_lanes][0] 
+      %td= data[:suggested_lanes][1]
