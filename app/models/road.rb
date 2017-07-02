@@ -20,15 +20,21 @@ class Road < ActiveRecord::Base
     return [upstream, downstream]
   end
 
+  def get_lanes
+    lanes = width/STD_CAR_WIDTH
+    lanes = lanes.floor
+  end
 
   def self.get_lanes_for_goodshed_road()
     s = "11.001481,76.962722"
     d = "10.994353,76.967031"
     road = Road.find(3586)
-    lanes = road.width/STD_CAR_WIDTH
-    lanes = lanes.floor
-    upstream_lanes = 
-    return []
+    lanes = road.get_lanes
+    times = travel_time(s,d, "AIzaSyA1g5auAN12CDpfRMWEC8y8yfbSK29fvUA")
+    times = times.map(&:to_i)
+    upstream_lanes = times[0]*lanes/times.sum
+    downstream_lanes = lanes - upstream_lanes
+    return [upstream_lanes, downstream_lanes]
   end
 
 
