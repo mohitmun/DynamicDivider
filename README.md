@@ -2,14 +2,15 @@
 https://dynamic-divier.herokuapp.com
 
 
-#Instruction to run
-  bundle
-  rake db:create
-  rake db:migrate
-  # Start rails console and run following command to populate roads table with data
-  Road.create_from_csv
+# Instruction to run
+	bundle
+	rake db:create
+	rake db:migrate
+	# Start rails console and run following command to populate roads table with data
+	Road.create_from_csv
 
 ## Start rails server
-  rails s
+	rails s
 
+# Screenshot
 ![Screenshot](screenshot.png)
