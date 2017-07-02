@@ -1,0 +1,5 @@
+development:
+  adapter: postgresql
+  database: dynamic_divider_dev
+  username: mohitmunjani
+  host: localhost
