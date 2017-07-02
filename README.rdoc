@@ -1,6 +1,8 @@
 # Demo URL
 https://dynamic-divier.herokuapp.com
 
+![Screenshot](screenshot.png)
+
 #Instruction to run
   bundle
   rake db:create
