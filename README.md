@@ -1,7 +1,6 @@
 # Demo URL
 https://dynamic-divier.herokuapp.com
 
-![Screenshot](screenshot.png)
 
 #Instruction to run
   bundle
@@ -13,4 +12,4 @@ https://dynamic-divier.herokuapp.com
 ## Start rails server
   rails s
 
-
+![Screenshot](screenshot.png)
